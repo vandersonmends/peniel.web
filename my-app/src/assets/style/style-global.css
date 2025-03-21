@@ -1,0 +1,19 @@
+
+
+
+ /* Variables styles globales */
+:root{
+
+  /* Colores */
+
+  /* Color background */
+  --color-black-background: #0A0B09;
+}
+
+.color-black-background{
+  background-color: var(--color-black-background);
+}
+.container{
+  max-width: 1200px;
+  margin: 0rem auto;
+}
