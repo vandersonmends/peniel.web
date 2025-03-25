@@ -59,12 +59,12 @@ function Connection() {
  return (
     <div className="min-h-screen p-7 flex flex-col mt-28 text-white">
       <div className="w-full max-w-lg mx-auto">
-        <h1 className="text-4xl font-bold mb-10 text-center">Células Disponíveis</h1>
+        <h1 className="text-4xl font-bold mb-10 text-center max-[480px]:text-2xl">Células Disponíveis</h1>
 
         <input
           type="text"
           placeholder="Buscar célula..."
-          className="w-full p-2 mb-6 text-white bg-transparent border border-gray-300 rounded-md"
+          className="w-full p-2 mb-6 text-white bg-transparent border border-gray-300 rounded-md max-[480px]:text-sm"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
@@ -78,39 +78,36 @@ function Connection() {
               <div>
                 <img src={Img} alt="" className="my-2 rounded-md" />
               </div>
-              <div className="pt-1 px-8 py-2 mb-6">
-                <div className={`h-10 ${celula.cor} rounded-xl flex items-center justify-center text-white font-bold text-xl`}>
+              <div className="pt-1 px-8 max-[480px]:px-4 py-2 mb-2">
+                <div className={`h-10 ${celula.cor} rounded-xl flex items-center justify-center text-white font-bold text-xl max-[480px]:text-base`}>
                   {celula.nome}
                 </div>
                 <div className="p-4 text-white text-lg">
                   <div className="flex items-center gap-2">
                     <img src={IconLocalizacao} alt="Icone Localização" className="w-3 h-4" />
-                    <p className="font-semibold">
+                    <p className="font-semibold max-[480px]:text-sm">
                       Local: <span className="">{celula.local}</span>
                     </p>
                   </div>
                   {/* Horario e Dia */}
-                  <div className="flex gap-10 mt-3">
+                  <div className="flex gap-10 mt-3 max-[480px]:text-sm max-[350px]:text-xs">
                     <div>
                       <div className="flex items-center gap-2">
                         <img src={IconCalendar} alt="Icone Localização" className="w-3 h-4" />
-                        <p className="font-semibold">Quarta Feira</p>
+                        <p className="font-semibold ">Quarta Feira</p>
                       </div>
                     </div>
                     <div>
                       <div className="flex items-center gap-2">
                         <img src={IconRelogio} alt="Icone Localização" className="w-4 h-4" />
-                        <p className="font-semibold">20h</p>
+                        <p className="font-semibold ">20h</p>
                       </div>
                     </div>
                   </div>
                   {/* <p className=" font-semibold">Líderes: <span className="">{celula.lideres.join(", ")}</span></p> */}
-                  <div className="mt-4 flex gap-6">
-                    <button className="bg-blue-600 text-white px-10 py-2 rounded-lg hover:bg-blue-700">
-                      Saiba Mais
-                    </button>
-                    <button className="bg-gray-300 text-gray-800 px-10 py-2 rounded-lg hover:bg-gray-400">
-                      Contato
+                  <div className="mt-2 flex">
+                    <button className="bg-blue-600 w-full text-white px-10 max-[480px]:px-6 py-2 max-[480px]:py-1 max-[480px]:text-sm rounded-lg hover:bg-blue-700">
+                      Quero Participar
                     </button>
                   </div>
                 </div>
@@ -119,7 +116,7 @@ function Connection() {
           ))
         ) : (
 <div>
-      <p className="text-center text-2xl text-red-500 animate__animated animate__bounceInRight">
+      <p className="text-center text-3xl text-white animate__animated animate__bounceInRight">
         Nenhuma célula encontrada.
       </p>
     </div>
