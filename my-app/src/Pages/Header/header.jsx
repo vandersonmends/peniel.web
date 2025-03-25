@@ -5,8 +5,8 @@ import '../../assets/style/style-global.css'
 function header() {
   return (
     <header className='container'>
-      <div className='flex justify-center items-center'>
-        <img src={logoSvg} alt="Logo da Igreja Peniel" className='p-10 m-10' />
+      <div className='flex justify-center py-3'>
+        <img src={logoSvg} alt="Logo da Igreja Peniel" className='' />
       </div>
       {/* <div>
         <nav>

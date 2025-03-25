@@ -7,7 +7,7 @@ function App() {
 
   return (
     < > 
-    <div className='flex justify-center items-center h-screen color-black-background '>
+    <div className='color-black-background '>
       <Header /> 
        </div>
     </>
